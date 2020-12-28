@@ -1,12 +1,36 @@
-form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
-}
-
-input {
+// form {
+//     border: 1px solid #545454;
+//     border-radius: 3px;
+//     padding: 40px;
+// }
+.input-box {
     padding: 5px 20px;
     width: 100%;
     line-height: 16px;
     margin: 10px 0;
+}
+
+.textblock {
+    text-align: center;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.3);
+    color: #f1f1f1;
+    height: 100%;
+    width: 98%;
+    border-radius: 5px;
+    //
+}
+
+.gallary {
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+}
+
+.image {
+    height: 200px;
+    width: 290px;
+    object-fit: cover;
 }

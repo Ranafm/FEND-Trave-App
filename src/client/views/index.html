@@ -3,38 +3,68 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>Travel App</title>
 
 </head>
 
-<body>
+<body class="container">
 
     <header>
-        <div class="">
-            Logo
+
+        <div class="nav">
+            Travel App
         </div>
-        <div class="">
-            navigation
+        <div class="text">
+            See your destination
         </div>
     </header>
 
-    <main>
-        <section>
-            <form class="" onsubmit="return Client.handleSubmit(event)">
-                <input id="name" type="text" name="input" value="" placeholder="Name">
-                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-            </form>
-            <section>
 
-                <section>
-                    <strong>Form Results here:</strong>
-                    <div id="results"></div>
-                </section>
-    </main>
+    <section class="form-content">
+        <form onsubmit="return Client.handleSubmit(event)">
+            <label for="city">Going To: </label>
+            <input type="text" class="input-box" name="location" id="user-location" placeholder="Enter Location" />
+            <div>
+                <span> 
+                        <label for="start-date">Departing Date: </label>
+                        <input class="input-box" type="date" name="date" id="start-date" placeholder="MM/DD/YYYY"  />
+                    </span>
+                <span>
+                    <label for="end-date">Returning Date: </label>
+                        <input class="input-box"   type="date"  name="date" id="end-date" placeholder="MM/DD/YYYY"  />
+                    </span>
+            </div>
+
+            <button class="btn" id="add" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">Show result</button>
+            <!-- <input class="btn" type="submit" name="" value="Show result" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)"> -->
+        </form>
+    </section>
+    <section class="result-content textblock">
+        <div>
+
+            <strong><h2>Information about your trip :</h2></strong>
+            <br>
+            <div id="results">
+                <p id="days"></p>
+                <p id="city"></p>
+                <p id="wether">
+                </p>
+                <br> <br>
+            </div class="gallary">
+            <div id="images">
+            </div>
+    </section>
+
 
     <footer>
-        <p>This is a footer</p>
+        <br>
+        <p>For More Travel Information </p>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <br>
     </footer>
+
     <script>
         // Check that service workers are supported
         if ('serviceWorker' in navigator) {
