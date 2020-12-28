@@ -55,7 +55,7 @@ async function geoNamesAPI(location) {
     console.log('geonames API begins!');
 
     //send request to the geonames_ap
-    const getCoordinates = await fetch(`http://api.geonames.org/searchJSON?q=${projectData.input.place}&maxRows=1&username=${process.env.user_name}`, { method: "Get" })
+    const getCoordinates = await fetch(`http://api.geonames.org/searchJSON?q=${projectData.input.place}&maxRows=1&username=ranafm`, { method: "Get" })
         //catch the error if the api request fails]
         .then((res) => {
 
@@ -98,11 +98,11 @@ async function weatherbitAPI(date, start_date, end_date) {
 
     if (date > 7) {
         console.log('in the future');
-        url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${projectData.input.place}&country=${projectData.coords.countryCode}&lat=${projectData.coords.lat}&lon=${projectData.coords.lng}&key=${process.env.Weather_Key}`
+        url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${projectData.input.place}&country=${projectData.coords.countryCode}&lat=${projectData.coords.lat}&lon=${projectData.coords.lng}&key=ecf03e3d824f45ceaf54e37b2b27c802`
             //console.log(`https://api.weatherbit.io/v2.0/forecast/daily?city=${projectData.coords.city}&country=${projectData.coords.countryCode}&lat=${projectData.coords.lat}&lon=${projectData.coords.lng}&key=ecf03e3d824f45ceaf54e37b2b27c802`);
     } else {
         console.log('within a week');
-        url = `https://api.weatherbit.io/v2.0/current?city=${projectData.input.place}&country=${projectData.coords.countryCode}&lat=${projectData.coords.lat}&lon=${projectData.coords.lng}&key=${process.env.Weather_Key}`
+        url = `https://api.weatherbit.io/v2.0/current?city=${projectData.input.place}&country=${projectData.coords.countryCode}&lat=${projectData.coords.lat}&lon=${projectData.coords.lng}&key=ecf03e3d824f45ceaf54e37b2b27c802`
 
     }
 
@@ -139,7 +139,7 @@ async function pixabayAPI(city) {
     console.log('Pixabay API Begins');
 
     //https://pixabay.com/api/?key=19681001-9357084b34b6df29c8ab20ae9&q=hail&image_type=photo&per_page=3
-    const getPic = await fetch(`https://pixabay.com/api/?key=${process.env.Pic_Key}&q=${projectData.input.place}&image_type=photo&per_page=3`).then((res) => {
+    const getPic = await fetch(`https://pixabay.com/api/?key=19681001-9357084b34b6df29c8ab20ae9&q=${projectData.input.place}&image_type=photo&per_page=3`).then((res) => {
 
         return res.json();
 
